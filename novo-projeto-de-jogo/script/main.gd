@@ -37,4 +37,9 @@ func _on_bug_timer_timeout():
 	var direction = bug_location.rotation + PI /2
 	bug.position = bug.location.position
 	direction += randf_range(-PI /4, PI /4)
+	var velocity =Vector2(randf_range(150.0,250.0), 0.0)
+	bug.linear_velocity = velocity.rotated(direction)
+	add_child(bug)
+	
+	
 	
